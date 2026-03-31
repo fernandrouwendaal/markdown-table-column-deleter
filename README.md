@@ -4,7 +4,7 @@ Delete the current selected column in a markdown table.
 
 Install extension from VSCode marketplace.
 
-https://marketplace.visualstudio.com/items?itemName=fernandrouwendaal.markdown-table-column-deleter
+https://marketplace.visualstudio.com/items?itemName=fernandr.markdown-table-column-deleter
 
 # Usage
 
