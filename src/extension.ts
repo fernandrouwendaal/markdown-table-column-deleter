@@ -31,14 +31,14 @@ export function activate(context: vscode.ExtensionContext) {
         // Step 2: Find column index based on cursor position in header row
         const headerLine = lines[cursorLine];
         const headerCellsRaw = headerLine.split('|');
-        const headerCells = headerCellsRaw.slice(1, -1).map(cell => cell.trimEnd());
+        const headerCells = headerCellsRaw.slice(1, -1);
 
         let columnIndex = -1;
         let cumulativeLength = 1; // Leading '|'
 
         for (let i = 0; i < headerCells.length; i++) {
-            cumulativeLength += headerCells[i].length + 3; // ' | '
-            if (cursorChar <= cumulativeLength) {
+            cumulativeLength += headerCells[i].length + 1; // cell content + '|'
+            if (cursorChar < cumulativeLength) {
                 columnIndex = i;
                 break;
             }

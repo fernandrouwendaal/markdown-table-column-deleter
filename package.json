@@ -2,7 +2,7 @@
   "name": "markdown-table-column-deleter",
   "displayName": "Markdown Table Column Deleter",
   "description": "Delete the current selected column in a Markdown table",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publisher": "fernandr",
     "repository": {
       "type": "git",
@@ -15,7 +15,9 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
